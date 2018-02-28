@@ -29,4 +29,20 @@ public class InterestCalculatorTest {
         assertEquals(21.0, ic.computeInterest(principal, intRate,2,0,1),0.000000001);
     }
 
-}
+    @Test
+    public void computeMortgagePayment() throws Exception {
+        /*
+        clear_kbd;
+        ErrorCode := 0;  CriticalVal := 0.0;
+        r := IntRate/100.0/Periods_Per_Year;
+        n := Trunc(NumYears *Periods_Per_Year + YearParts);
+
+        If (p = 0.0) AND (A<>0.0) AND (r<>0.0) AND (n<>0) Then
+        p := (r * A) / (1 - (IntExp(1 + r,-n)))
+        */
+        MortgageCalculator mc = new MortgageCalculator();
+
+        assertEquals(1107,mc.calculatePayment(225000,3.75,30, 000001), 00000001);
+    }
+
+    }
