@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MortgageCalculator</string>
+    <string name="action_settings">Settings</string>
+    <string name="num_years">Num Years</string>
+    <string name="interest_rate">Interest Rate</string>
+    <string name="amount">Amount</string>
+</resources>
