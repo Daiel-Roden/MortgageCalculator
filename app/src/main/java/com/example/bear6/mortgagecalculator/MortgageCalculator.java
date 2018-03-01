@@ -15,8 +15,10 @@ package com.example.bear6.mortgagecalculator;
         */
 
 class MortgageCalculator {
-    public Double calculatePayment(int amount, double intRate, int years, int i2) {
-        Double intR = intRate/100/12;
-        return intRate/100/12 * amount / (1-Math.pow(1+intR,-360));
+    public Double calculatePayment(double amount, double intRate, double years) {
+        Double periodsPerYear = 12.0;
+        Double numberOfPeriods = periodsPerYear * years;
+        Double rate = intRate/100.0/periodsPerYear;
+        return (rate * amount / (1.0 - Math.pow(1.0 + rate, -numberOfPeriods)));
     }
 }

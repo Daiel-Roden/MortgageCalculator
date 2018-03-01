@@ -42,7 +42,7 @@ public class InterestCalculatorTest {
         */
         MortgageCalculator mc = new MortgageCalculator();
 
-        assertEquals(1107,mc.calculatePayment(225000,3.75,30, 000001), 00000001);
+        assertEquals(1035.64,mc.calculatePayment(225000,3.70,30), 0.005);
     }
 
     }
